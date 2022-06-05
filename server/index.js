@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 io.on('connection', (socket) => {
   const username = socket.handshake.query.username
   socket.on('message', (data) => {
+  console.log('data ', data);
     const message = {
       message: data.message,
       senderUsername: username,

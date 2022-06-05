@@ -7,6 +7,7 @@ class HomeProvider extends ChangeNotifier {
   List<Message> get messages => _messages;
 
   addNewMessage(Message message) {
+    print('\n\nMessage $message\n\n');
     _messages.add(message);
     notifyListeners();
   }
